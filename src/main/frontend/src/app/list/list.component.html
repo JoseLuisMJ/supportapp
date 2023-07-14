@@ -1,1 +1,22 @@
 <p>list works!</p>
+<p>list works!</p>
+<table class="table zebra" id="zebra">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>User</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of apiData">
+        <td>{{ item.id }}</td>
+        <td>{{ item.subject }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.user }}</td>
+        <td>{{ item.date }}</td>
+      </tr>
+    </tbody>
+  </table>
