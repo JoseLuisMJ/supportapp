@@ -1,5 +1,6 @@
 
-<table class="table zebra" id="zebra">
+<div class="tableDiv container">
+  <table class="table" id="zebra">
     <thead>
       <tr>
         <th>ID</th>
@@ -11,13 +12,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of apiData">
+      <tr *ngFor="let item of apiData; let i = index" [ngStyle]="{'background-color': i % 2 === 0 ? '#f2f2f2' : '#ffffff'}">
         <td>{{ item.id }}</td>
         <td>{{ item.subject }}</td>
         <td>{{ item.description }}</td>
         <td>{{ item.user }}</td>
         <td>{{ item.date }}</td>
-        <td><button routerLink="/edit/{{ item.id }}">Editar</button></td>
+        <td><button id="edit" class="btn btn-success" routerLink="/edit/{{ item.id }}">Editar</button></td>
       </tr>
     </tbody>
   </table>
+</div> 

@@ -1,8 +1,14 @@
-<header>
-  <img src="" alt="Logo">
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  
-    <button class="btn btn-primary-list" (click)="goToList()" type="button">Lista</button>
-    <button class="btn btn-primary-create" type="button" routerLink="/create">Crear</button>
+<nav class="navbar navbar-custom">
+  <div class="mainnav container">
+  <div class="logodiv container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo.png" alt="Logo" width="120" height="156" class="d-inline-block align-text-top">
+      Joker Interactive
+    </a>
   </div>
-</header>
+  <div class="buttonsDiv container-fluid">
+    <button id="list" class="btn btn-primary-list" (click)="goToList()" type="button">Request List</button>
+    <button id="create" class="btn btn-primary-create" type="button" routerLink="/create">New Request</button>
+  </div>
+</div>
+</nav>

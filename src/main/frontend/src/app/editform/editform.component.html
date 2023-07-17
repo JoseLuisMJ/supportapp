@@ -1,4 +1,5 @@
-<div class="formDiv">
+<div class="formDiv container">
+    <h1>Edit Request</h1>
     <form (ngSubmit)="onSubmit()">
 <div class="input-group mb-3">
     <span class="input-group-text" id="basic-addon1">@</span>
@@ -20,8 +21,10 @@
     <span class="input-group-text">Description</span>
 <textarea class="form-control" id="description" [(ngModel)]="formData.description" name="description"></textarea>
 </div>
-<button class="btn btn-primary" type="submit">Submit</button>
-<button class="btn btn-secondary" type="button" (click)="onCancel()">Cancel</button>
+<div class="buttons">
+<button id="submit" class="btn btn-primary" type="submit">Submit</button>
+<button id="cancel" class="btn btn-secondary" type="button" (click)="onCancel()">Cancel</button>
+</div>
 </form>
 </div>
 
