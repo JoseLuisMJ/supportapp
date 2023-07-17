@@ -19,6 +19,13 @@ tr {
 }
 
 .zebra tr :nth-child(odd){
-    background-color: #668152;
+    background-color: #668152;   
+}
+
+div {
+    opacity: 1;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
 }
 
