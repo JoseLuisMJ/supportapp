@@ -1,1 +1,36 @@
-<p>createform works!</p>
+
+
+
+<div class="formDiv">
+
+<form (ngSubmit)="onSubmit()">
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Request ID</span>
+    <input class="form-control" placeholder="123..." aria-label="Request ID" aria-describedby="basic-addon1" type="text" id="id" [(ngModel)]="formData.id" name="id">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">User</span>
+        <input class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" type="text" id="user" [(ngModel)]="formData.user" name="user">
+    </div>
+  
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Date</span>
+        <input class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" type="date" id="date" [(ngModel)]="formData.date" name="date">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Subject</span>
+        <input  type="text" id="subject" placeholder="Windows" [(ngModel)]="formData.subject" name="subject">
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-text">Description</span>
+        <textarea class="form-control" placeholder="Windows stop working" aria-label="With textarea" id="description" [(ngModel)]="formData.description" name="description"></textarea>
+    </div>
+
+    
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-secondary" type="button" (click)="onCancel()">Cancel</button>
+  </form>
+
+</div>

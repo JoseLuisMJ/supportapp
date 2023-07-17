@@ -13,10 +13,18 @@ export class ListComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    // LLamamos a la api
-    this.http.get<any[]>('http://localhost:8000/Request')
+    this.http.get<any[]>('http://localhost:8888/Request')
       .subscribe(data => {
-        this.apiData = data;
+        this.apiData = this.formatDateInApiData(data);
       });
+  }
+
+  formatDateInApiData(data: any[]): any[] {
+    return data.map(item => {
+      const date = new Date(item.date);
+      const formattedDate = date.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      item.date = formattedDate;
+      return item;
+    });
   }
 }

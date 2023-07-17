@@ -1,5 +1,4 @@
-<p>list works!</p>
-<p>list works!</p>
+
 <table class="table zebra" id="zebra">
     <thead>
       <tr>
@@ -8,6 +7,7 @@
         <th>Description</th>
         <th>User</th>
         <th>Date</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +17,7 @@
         <td>{{ item.description }}</td>
         <td>{{ item.user }}</td>
         <td>{{ item.date }}</td>
+        <td><button routerLink="/edit/{{ item.id }}">Editar</button></td>
       </tr>
     </tbody>
   </table>
