@@ -1,0 +1,31 @@
+th { 
+    background-color: #9941B8;
+    border: 2px solid #9941B8;
+    color: white;
+}
+
+td {
+    
+    border: 2px solid #9941B8;
+    color: white;
+}
+
+tr {
+    color: white;
+}
+
+.zebra tr :nth-child(even){
+    background-color: #9EBF83;
+}
+
+.zebra tr :nth-child(odd){
+    background-color: #668152;   
+}
+
+div {
+    opacity: 1;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+}
+
